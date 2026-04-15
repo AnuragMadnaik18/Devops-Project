@@ -62,7 +62,7 @@ jobs:
       # 🚀 First time deployment (IMPORTANT)
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f k8s/
+          kubectl apply -f K8S/
 
       # 🔁 Update image (for next runs)
       - name: Update Deployment Image
