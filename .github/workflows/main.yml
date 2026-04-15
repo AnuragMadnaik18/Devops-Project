@@ -38,3 +38,9 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/devops-app
+          
+      
+      - name: Deploy to Kubernetes
+        run: |
+          aws eks update-kubeconfig --region ap-south-1 --name devops-cluster
+          kubectl set image deployment/devops-app devops-app=${{ secrets.DOCKER_USERNAME }}/devops-app
