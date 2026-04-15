@@ -19,7 +19,7 @@ function App() {
     setTimeout(() => {
       setApiData({
         status: "Running",
-        version: "v1.0.0",
+        version: "v2.0.0",
         deployments: Math.floor(Math.random() * 20) + 1,
       });
       setLoading(false);
